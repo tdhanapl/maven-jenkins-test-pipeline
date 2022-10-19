@@ -21,7 +21,7 @@ pipeline{
                 sh "mvn  install -DskipTests" //DskipTests-it skip tests in this stage
             }
         }
-        stage('Test Maven - JUnit') {
+        stage('Test Maven - JUnit and Jacoco') {
             steps {
               sh "mvn test"
               jacoco()
